@@ -1,4 +1,4 @@
 <?php
-$con = mysqli_connect('localhost', 'root', '', 'bigowl');
+$con = mysqli_connect('localhost', 'user', 'pass', 'db');
 
 ?>

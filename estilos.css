@@ -16,6 +16,9 @@
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1; 
 }
+.blur {
+  filter: blur(4px); 
+}
 .name-genger {
   margin-left: 20%;
   font-size: 20px;
@@ -332,7 +335,7 @@ a {
 }
 .modal_conteudo {
   padding: 5%;
-  background-color: rgba(10, 10, 22, 0.5); /* 0.5 representa 50% de opacidade */
+  background-color: rgba(10, 10, 22, 0.5); 
   margin-left: auto;
   margin-right: auto;
   border: 1px solid #888;
@@ -342,8 +345,8 @@ a {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%; /* Ajuste a largura conforme necessário */
-  z-index: 1; /* Garante que a div fique na frente da imagem */
+  width: 80%; 
+  z-index: 1;
 
 }
 
@@ -454,9 +457,9 @@ a {
   padding-right: 2%;
   margin-top: -2%;
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  text-align: center; /* Centraliza o texto horizontalmente */
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
 }
 
 
@@ -519,9 +522,9 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(98, 89, 89, 0.7); /* Fundo com opacidade */
-  backdrop-filter: blur(5px); /* Efeito de desfoque */
-  z-index: 999; /* Garante que a div esteja na frente de outros elementos */
+  background-color: rgba(98, 89, 89, 0.7); 
+  backdrop-filter: blur(5px); 
+  z-index: 999; 
   display: flex;
   justify-content: center;
   align-items: center;

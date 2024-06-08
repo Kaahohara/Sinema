@@ -25,7 +25,7 @@ if (isset($_POST['enviar'])) {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Cadastre-se</title>
         <meta charset="utf-8" />
@@ -48,7 +48,7 @@ if (isset($_POST['enviar'])) {
             <input type='password' name='Senha'required></label>
         <button type='submit' class="insert-button" name='enviar' class='btn btn-secondary'> Cadastrar</button>
         
-        <a style='text-decoration:none;color:#fff;'href='login.php'>Já Possui um login?</a>    
+        <a style='text-decoration:none;color:#fff;'href='login.php'>Já Possui um login?</a>
         
 </body>
 </html>

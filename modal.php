@@ -11,12 +11,7 @@
   backdrop-filter: blur(5px);
  ">
 
-  <style>
-    .blur {
-  filter: blur(4px); /* Ajuste o valor conforme necessário */
-}
 
-  </style>
                   <?php
                  require_once 'vendor/autoload.php';
 
@@ -27,7 +22,7 @@
              
    
 
-                    $apiKey = '66b674b987aded432d2ceb9f8d78dd18';
+                    $apiKey = 'apykey';
 
         $client = new Client();
 
@@ -88,7 +83,7 @@ if ($response->getStatusCode() == 200) {
 $client = new GuzzleHttp\Client();
 $response = $client->get("https://api.themoviedb.org/3/movie/{$id}/videos", [
     'query' => [
-        'api_key' => '66b674b987aded432d2ceb9f8d78dd18',
+        'api_key' => 'apykey',
     ],
 ]);
 
@@ -96,7 +91,7 @@ $data = json_decode($response->getBody());
 
 if (isset($data->results) && !empty($data->results)) {
      $trailer_key = $data->results[0]->key;
-$youtubeApiKey = 'AIzaSyBwhq1Wt_mEMjeYVgNVETpO00Y2JY7ndik';
+$youtubeApiKey = 'apikey';
 $videoKey =  $trailer_key;
 
 $apiEndpoint = "https://www.googleapis.com/youtube/v3/videos";
@@ -138,19 +133,19 @@ try {
                                        <iframe style="width:100%; height:350px"  src="' . $trailer_url . '" frameborder="0" allowfullscreen></iframe>
                                        <div class="text">
                                        ' . $overview . '
-                                       </div> </div>    
+                                       </div> </div>
                                        ';
                                 }else {
                                     echo'
                                        
-                                    <div class="lado">       
+                                    <div class="lado">
                                      <div style="width:100%; height:100% max-width:50%">
                                ' . $overview . '
-                               </div>  </div>   
+                               </div>  </div>
                                ';
-                        }           
-                                echo'                
-                                    </div>    
+                        }
+                                echo'
+                                    </div>
                                     </div>
                                 <br><br>
                                 </div>

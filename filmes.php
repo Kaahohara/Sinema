@@ -17,13 +17,12 @@
 
     use GuzzleHttp\Client;
 
-    $apiKey = '66b674b987aded432d2ceb9f8d78dd18';
+    $apiKey = 'apiKey';
 
     $client = new Client();
     $registros_por_pagina = 5;
     $pagina_atual = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
     
-    // Obtendo a lista de gêneros disponíveis
     $genresUrl = "https://api.themoviedb.org/3/genre/movie/list?api_key=$apiKey&language=pt-BR";
     $genresResponse = $client->get($genresUrl);
     $genresData = json_decode($genresResponse->getBody());
@@ -31,7 +30,6 @@
 
     $selectedGenre = isset($_GET['genre']) ? $_GET['genre'] : null;
 
-    // Modificando a URL da API para incluir o gênero selecionado
     $url = "https://api.themoviedb.org/3/movie/popular?api_key=$apiKey&language=pt-BR&page=$pagina_atual";
     if ($selectedGenre) {
         $url .= "&with_genres=$selectedGenre";
