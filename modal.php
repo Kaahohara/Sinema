@@ -224,7 +224,7 @@ try {
  
 
 async function moviesGenger(genger) {
-    var apiKey = '66b674b987aded432d2ceb9f8d78dd18';
+    var apiKey = 'apikey';
     var url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${apiKey}&page=1&with_genres=${genger}`;
 
     try {
